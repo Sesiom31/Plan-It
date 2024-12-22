@@ -1,12 +1,7 @@
 import { SECRET_JWT } from "../config/env.js";
 import jwt from "jsonwebtoken";
 
-export const userLogin = async (req, res) => {
-  console.log("hola");
-  res.json({ message: "endpoint de prueba" });
-};
-
-export const verifyToken = async (req, res) => {
+export const authMiddleware = (req, res, next) => {
   const token = req.cookies.token;
 
   if (!token) {
@@ -17,9 +12,8 @@ export const verifyToken = async (req, res) => {
 
   try {
     const decoded = jwt.verify(token, SECRET_JWT);
-    return res
-      .status(200)
-      .json({ success: true, message: "Token is valid", user: decoded });
+    req.user = decoded;
+    next();
   } catch (err) {
     return res.status(403).json({ success: false, message: "Invalid token" });
   }
