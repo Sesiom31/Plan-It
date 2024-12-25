@@ -4,12 +4,12 @@ const features = [
   {
     title: "Planificación basada en el clima",
     description:
-      "Organiza tus actividades según las condiciones meterrológicas previstas",
+      "Organiza tus actividades según las condiciones metereológicas previstas",
     icon: CloudIcon,
     color: "text-blue-600",
   },
   {
-    title: "Gestion de tareas inteligente",
+    title: "Gestión de tareas inteligente",
     description:
       "Prioriza y organiza tus tareas de manera eficiente con nuestro sistema intuitivo",
     icon: DocumentCheckIcon,
@@ -37,7 +37,7 @@ function Features() {
     </section>
   ));
   return (
-    <div className="mt-8 px-4 tracking-wide">
+    <div className="mt-8 px-4 pt-8 tracking-wide">
       <section>
         <div>
           <h2 className="text-center text-3xl font-extrabold text-gray-900">
@@ -45,7 +45,7 @@ function Features() {
           </h2>
         </div>
 
-        {content}
+        <ul>{content}</ul>
       </section>
     </div>
   );
