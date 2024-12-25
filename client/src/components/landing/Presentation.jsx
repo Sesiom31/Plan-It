@@ -1,6 +1,8 @@
+import RegisterAuthButton from "../../ui/RegisterAuthButton";
+
 function Presentation() {
   return (
-    <div className="h auto mt-4 w-full p-4">
+    <div className="mt-4 h-auto w-full p-4">
       <section className="rounded-lg bg-gradient-to-b from-blue-100 to-green-200 p-2">
         <div className="flex flex-col items-center justify-center">
           <div className="mx-auto">
@@ -17,9 +19,7 @@ function Presentation() {
           </div>
         </div>
         <div className="mx-auto my-6 flex justify-center">
-          <button className="rounded-lg border-none bg-gray-900 px-4 py-1.5 text-base font-bold text-white outline-none hover:bg-gray-900">
-            Comenzar gratis
-          </button>
+          <RegisterAuthButton />
         </div>
       </section>
     </div>

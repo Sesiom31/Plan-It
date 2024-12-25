@@ -1,4 +1,5 @@
 import { CloudIcon } from "@heroicons/react/24/outline";
+import LoginAuthButton from "../ui/LoginAuthButton";
 
 function Header() {
   return (
@@ -9,9 +10,7 @@ function Header() {
           <h2 className="text-2xl font-bold text-gray-700">PlanIt</h2>
         </div>
         <div>
-          <button className="rounded-lg border-none bg-emerald-500 px-4 py-1.5 text-base font-bold text-white outline-none hover:bg-emerald-600">
-            Iniciar sesión
-          </button>
+          <LoginAuthButton />
         </div>
       </section>
     </header>

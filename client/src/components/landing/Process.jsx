@@ -17,7 +17,7 @@ const works = [
   },
 ];
 
-function Works() {
+function Process() {
   const content = works.map((work) => (
     <section
       key={work.numberStep}
@@ -56,4 +56,4 @@ function Works() {
   );
 }
 
-export default Works;
+export default Process;

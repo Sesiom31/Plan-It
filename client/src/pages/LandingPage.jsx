@@ -1,14 +1,16 @@
 import Features from "../components/landing/Features";
 import Footer from "../layouts/Footer";
+import JoinUs from "../components/landing/JoinUs";
 import Presentation from "../components/landing/Presentation";
-import Works from "../components/landing/Works";
+import Process from "../components/landing/Process";
 
 function LandingPage() {
   return (
     <div>
       <Presentation />
       <Features />
-      <Works />
+      <Process />
+      <JoinUs />
       <Footer />
     </div>
   );
