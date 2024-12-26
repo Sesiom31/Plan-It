@@ -4,9 +4,9 @@ import { useLocation } from "react-router-dom";
 
 function LayoutPage() {
   const location = useLocation().pathname;
-  const header = (location !== "register" || location !== "login") && (
-    <Header />
-  );
+  console.log(location);
+  const header =
+    location !== "/register" && location !== "/login" ? <Header /> : "";
 
   console.log(location);
   return (

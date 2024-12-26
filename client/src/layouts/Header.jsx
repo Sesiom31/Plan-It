@@ -9,7 +9,7 @@ function Header() {
           <CloudIcon className="h-6 w-6 font-bold text-sky-500" />
           <h2 className="text-2xl font-bold text-gray-700">PlanIt</h2>
         </div>
-        <div>
+        <div className="flex h-full items-center">
           <LoginAuthButton />
         </div>
       </section>
