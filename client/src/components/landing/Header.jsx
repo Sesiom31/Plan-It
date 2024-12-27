@@ -1,5 +1,5 @@
 import { CloudIcon } from "@heroicons/react/24/outline";
-import LoginAuthButton from "../ui/LoginAuthButton";
+import LoginAuthButton from "../../ui/LoginAuthButton";
 
 function Header() {
   return (

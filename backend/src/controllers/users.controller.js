@@ -8,7 +8,7 @@ export const userLogin = async (req, res) => {
 
 export const verifyToken = async (req, res) => {
   const token = req.cookies.token;
-
+  console.log("Hola");
   if (!token) {
     return res
       .status(401)
