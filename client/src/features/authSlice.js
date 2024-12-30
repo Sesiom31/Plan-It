@@ -27,6 +27,12 @@ const authSlice = createSlice({
       .addMatcher(apiSlice.endpoints.verifyAuth.matchRejected, (state) => {
         state.isAuthenticated = false;
         state.user = null;
+      })
+      .addMatcher(apiSlice.endpoints.registerUser.matchFulfilled, (state) => {
+        state.isAuthenticated = true;
+      })
+      .addMatcher(apiSlice.endpoints.loginUser.matchFulfilled, (state) => {
+        state.isAuthenticated = true;
       });
   },
 });

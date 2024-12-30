@@ -6,7 +6,7 @@ const router = createBrowserRouter(routes);
 
 function App() {
   return (
-    <div className="h-auto min-h-screen bg-gradient-to-b from-sky-100 to-blue-100">
+    <div className="h-auto min-h-screen bg-gradient-to-b from-sky-100 to-blue-200">
       <div className="mx-auto">
         <RouterProvider router={router} />
       </div>

@@ -3,10 +3,10 @@ import RegisterAuthButton from "../../ui/RegisterAuthButton";
 function Presentation() {
   return (
     <section className="h-auto w-full p-4">
-      <div className="rounded-lg bg-gradient-to-b from-blue-100 to-green-200 p-2 py-8">
+      <div className="h-full rounded-lg bg-gradient-to-b from-blue-100 to-green-200 p-2 py-8">
         <div className="flex flex-col items-center justify-center">
           <div className="mx-auto">
-            <h1 className="text-center text-4xl font-black tracking-wide text-gray-900">
+            <h1 className="h-auto py-1 text-center text-4xl font-black tracking-wide text-gray-900">
               Planifica con el clima de tu lado
             </h1>
           </div>

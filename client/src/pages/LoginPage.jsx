@@ -2,10 +2,14 @@ import FormAuth from "../components/auth/FormAuth";
 import HeadAuth from "../components/auth/HeadAuth";
 import ReturnIcon from "../ui/ReturnIcon";
 import { inputsLogin } from "../data/inputsLogin";
+import { loginSchema } from "../schemas/userAuth.schema";
+import { useLoginUserMutation } from "../services/api";
 
 function LoginPage() {
+  const [onLogin, { isLoading }] = useLoginUserMutation();
+
   return (
-    <section className="h-full max-h-screen w-full">
+    <section className="h-screen max-h-screen w-full bg-gradient-to-b from-blue-100 to-green-100">
       <div className="flex h-full w-full flex-col gap-10 px-4 py-8">
         <ReturnIcon to="/" />
 
@@ -20,6 +24,9 @@ function LoginPage() {
           optionLink="Regístrate"
           subtitle="¿No tienes una cuenta?"
           toLink="/register"
+          schema={loginSchema}
+          fetchAuth={onLogin}
+          isLoading={isLoading}
         />
       </div>
     </section>
