@@ -1,5 +1,5 @@
 function DashBoardPage() {
-  return <div></div>;
+  return <div>DashBoard</div>;
 }
 
 export default DashBoardPage;

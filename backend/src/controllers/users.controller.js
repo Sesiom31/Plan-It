@@ -1,9 +1,95 @@
-import { SECRET_JWT } from "../config/env.js";
+import { EXPIRE_TOKEN_IN, NODE_ENV, SECRET_JWT } from "../config/env.js";
+
+import { User } from "../models/user.model.js";
+import { createToken } from "../utils/createToken.js";
 import jwt from "jsonwebtoken";
 
+const optionsToken = {
+  httpOnly: true,
+  secure: NODE_ENV === "production",
+  sameSite: "none",
+  path: "/",
+  maxAge: 60 * 60 * 24,
+};
+
 export const userLogin = async (req, res) => {
-  console.log("hola");
-  res.json({ message: "endpoint de prueba" });
+  const { email, password } = req.body;
+
+  if (!email || !password) {
+    return res
+      .status(400)
+      .json({ success: false, message: "Los campos son requeridos" });
+  }
+
+  try {
+    let user = await User.findOne({ email });
+
+    if (!user) {
+      return res
+        .status(400)
+        .json({ success: false, message: "Credenciales incorrectas" });
+    }
+
+    const isPassword = await user.comparePassword(password);
+
+    if (!isPassword) {
+      return res
+        .status(400)
+        .json({ success: false, message: "Credenciales incorrectas" });
+    }
+
+    const token = createToken(
+      { id: user._id, username: user.username },
+      { expiresIn: EXPIRE_TOKEN_IN }
+    );
+
+    res.cookie("token", token, optionsToken);
+
+    res
+      .status(200)
+      .json({ success: true, message: "Inicio de sesión correcto" });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+};
+
+export const userRegister = async (req, res) => {
+  const { username, email, password } = req.body;
+
+  if (!username || !email || !password) {
+    return res
+      .status(400)
+      .json({ success: false, message: "Los campos son requeridos" });
+  }
+
+  try {
+    let user = await User.findOne({ email });
+
+    if (user) {
+      return res
+        .status(400)
+        .json({ success: false, message: "El usuario ya existe" });
+    }
+
+    user = new User({
+      username,
+      email,
+      password,
+    });
+
+    await user.save();
+
+    const token = createToken(
+      { id: user._id, username: user.username },
+      { expiresIn: EXPIRE_TOKEN_IN }
+    );
+
+    res.cookie("token", token, optionsToken);
+
+    res.status(200).json({ success: true, message: "Usuario creado" });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
 };
 
 export const verifyToken = async (req, res) => {
