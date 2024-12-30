@@ -7,7 +7,7 @@ function PublicRoute() {
 
   console.log({ isAuthenticated, isLoading, error });
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <Outlet />;
 
   return isAuthenticated ? <Navigate to="/dashboard" /> : <Outlet />;
 }
