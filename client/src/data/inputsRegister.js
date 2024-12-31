@@ -1,24 +1,24 @@
 export const inputsRegister = [
   {
-    label: "Nombre",
+    label: "  Nombre  ",
     name: "username",
     type: "text",
     placeholder: "Allan Poe",
   },
   {
-    label: "Email",
+    label: "  Correo electrónico  ",
     name: "email",
     type: "email",
     placeholder: "abc@email.com",
   },
   {
-    label: "Contraseña",
+    label: "  Contraseña  ",
     name: "password",
     type: "password",
     placeholder: "***********",
   },
   {
-    label: "Confirmar contraseña",
+    label: "  Confirmar contraseña  ",
     name: "confirmPassword",
     type: "password",
     placeholder: "***********",

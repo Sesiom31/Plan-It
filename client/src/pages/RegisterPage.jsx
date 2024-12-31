@@ -10,7 +10,7 @@ function RegisterPage() {
 
   return (
     <section className="h-screen max-h-screen w-full">
-      <div className="flex h-auto w-full flex-col gap-8 px-4 py-8">
+      <div className="flex h-full w-full flex-col gap-10 px-4 py-8">
         <ReturnIcon to="/" />
 
         <HeadAuth

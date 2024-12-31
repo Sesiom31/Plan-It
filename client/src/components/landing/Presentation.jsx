@@ -1,3 +1,4 @@
+import Prueba from "./Prueba";
 import RegisterAuthButton from "../../ui/RegisterAuthButton";
 
 function Presentation() {
@@ -21,6 +22,7 @@ function Presentation() {
         <div className="mx-auto my-6 flex justify-center">
           <RegisterAuthButton />
         </div>
+        <Prueba />
       </div>
     </section>
   );

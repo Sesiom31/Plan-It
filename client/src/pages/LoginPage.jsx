@@ -9,7 +9,7 @@ function LoginPage() {
   const [onLogin, { isLoading }] = useLoginUserMutation();
 
   return (
-    <section className="h-screen max-h-screen w-full bg-gradient-to-b from-blue-100 to-green-100">
+    <section className="h-screen max-h-screen w-full">
       <div className="flex h-full w-full flex-col gap-10 px-4 py-8">
         <ReturnIcon to="/" />
 
