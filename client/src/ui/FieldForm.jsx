@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 function FieldForm({ input, register, errors }) {
   const existingError = errors[input.name] !== undefined;
-  const timeAnimation = 0.5;
+  const timeAnimation = 0.35;
   const partTime = Math.round((timeAnimation / input.label.length) * 100) / 100;
 
   return (

@@ -2,26 +2,27 @@ import RegisterAuthButton from "../../ui/RegisterAuthButton";
 
 function JoinUs() {
   return (
-    <div className="mt-4 h-auto w-full border-b border-gray-400 p-4">
-      <section>
-        <div className="flex flex-col items-center justify-center">
-          <div>
-            <h2 className="text-center text-3xl font-extrabold text-gray-900">
-              ¿Listo para planificar con inteligencia?
+    <section className="p-4">
+      <div className="min-h-60 pb-8">
+        <div className="mt-10 sm:mt-4 md:mt-12 lg:mt-20">
+          <div className="">
+            <h2 className="text-center text-3xl font-medium text-gray-800 md:text-4xl">
+              ¿Listo para tomar el control de tu tiempo?
             </h2>
           </div>
-          <div className="mt-6">
+          <div className="mt-6 md:mt-2">
             <p className="text-center text-gray-500">
-              Únete a PlanIt hoy y comienza a optimizar tu tiempo y
-              productividad con la ayuda del clima
+              Únete a la comunidad de PlanIt y descubre una forma más efectiva
+              de gestionar tus tareas y alcanzar tus metas.
             </p>
           </div>
         </div>
-        <div className="mx-auto my-6 flex justify-center">
+
+        <div className="mx-auto mt-10 flex justify-center md:mt-14">
           <RegisterAuthButton />
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
 

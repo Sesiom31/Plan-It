@@ -1,41 +1,24 @@
+import ProcessCard from "../../ui/ProcessCard";
 import { steps } from "../../data/stepsProcess";
 
 function Process() {
   const content = steps.map((step) => (
-    <section
-      key={step.numberStep}
-      className="flex h-auto w-full flex-col items-center rounded-xl border border-gray-400 px-2 py-6"
-    >
-      <div>
-        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-black text-2xl font-bold text-white">
-          {step.numberStep}
-        </div>
-      </div>
-
-      <div className="text-center">
-        <div className="mt-2">
-          <h3 className="text-[1.45rem] font-bold text-gray-800">
-            {step.title}
-          </h3>
-        </div>
-        <div className="mt-2">
-          <p className="text-gray-500">{step.description}</p>
-        </div>
-      </div>
-    </section>
+    <ProcessCard step={step} key={step.title} />
   ));
   return (
-    <div className="my-8 border-b border-gray-400 bg-gray-100 px-4 py-8 tracking-wide">
-      <section>
-        <div className="mb-8">
-          <h2 className="text-center text-3xl font-extrabold text-gray-900">
+    <section className="h-auto p-4">
+      <div className="min-h-[40rem] lg:min-h-[28rem]">
+        <div className="mt-8 sm:mt-4 md:mt-12 lg:mt-20">
+          <h2 className="text-center text-3xl font-medium text-gray-800 md:text-4xl">
             ¿Cómo funciona?
           </h2>
         </div>
 
-        <ul className="flex flex-col items-center gap-8">{content}</ul>
-      </section>
-    </div>
+        <dl className="mt-8 grid grid-cols-[repeat(auto-fill,minmax(18rem,24rem))] justify-center gap-6 px-6 md:mt-12 md:gap-10">
+          {content}
+        </dl>
+      </div>
+    </section>
   );
 }
 

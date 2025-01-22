@@ -4,9 +4,9 @@ function RegisterAuthButton() {
   return (
     <Link
       to="/register"
-      className="rounded-lg bg-gray-900 px-4 py-1.5 text-base font-bold text-white outline-none hover:bg-gray-900"
+      className="flex h-12 w-40 items-center justify-center rounded-md bg-[#F57C00] px-4 tracking-wider text-[#F5F9FF]"
     >
-      Comenzar gratis
+      Empezar
     </Link>
   );
 }

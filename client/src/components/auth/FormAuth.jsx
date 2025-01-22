@@ -55,7 +55,7 @@ function FormAuth({
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="my-2 flex h-auto flex-col ">
+      <div className="mb-2 flex h-auto flex-col">
         {content}
         <span className="h-6 w-full text-center text-sm font-bold text-red-500">
           {errors["notUser"] && errors["notUser"].message}

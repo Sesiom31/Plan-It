@@ -7,12 +7,16 @@ import Process from "../components/landing/Process";
 
 function LandingPage() {
   return (
-    <div>
+    <div className="h-auto w-full">
       <Header />
-      <Presentation />
-      <Features />
-      <Process />
-      <JoinUs />
+
+      <main className="mt-20 lg:mt-16">
+        <Presentation />
+        <Features />
+        <Process />
+        <JoinUs />
+      </main>
+
       <Footer />
     </div>
   );

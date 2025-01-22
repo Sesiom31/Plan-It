@@ -1,36 +1,24 @@
+import FeatureCard from "../../ui/FeatureCard";
 import { featuresPlanIt as features } from "../../data/featuresPlanIt";
 
 function Features() {
   const content = features.map((feature) => (
-    <section className="mt-10 flex flex-col items-center" key={feature.title}>
-      <figure className={`${feature.color}`}>
-        <feature.icon className="aspect-square h-12 w-12 text-2xl font-black" />
-      </figure>
-
-      <div className="text-center">
-        <div className="mt-2">
-          <h3 className="text-[1.45rem] font-bold text-gray-800">
-            {feature.title}
-          </h3>
-        </div>
-        <div className="mb-6 mt-2">
-          <p className="text-gray-500">{feature.description}</p>
-        </div>
-      </div>
-    </section>
+    <FeatureCard key={feature.title} feature={feature} />
   ));
   return (
-    <div className="mt-8 px-4 pt-8 tracking-wide">
-      <section>
-        <div>
-          <h2 className="text-center text-3xl font-extrabold text-gray-900">
+    <section className="h-auto p-4">
+      <div className="min-h-[40rem]">
+        <div className="mt-8 md:mt-12 lg:mt-20">
+          <h2 className="text-center text-3xl font-medium text-gray-800 md:text-4xl">
             Características principales
           </h2>
         </div>
 
-        <ul>{content}</ul>
-      </section>
-    </div>
+        <dl className="mt-8 grid grid-cols-[repeat(auto-fill,minmax(18rem,24rem))] justify-center gap-6 px-6 md:mt-12 md:gap-10">
+          {content}
+        </dl>
+      </div>
+    </section>
   );
 }
 

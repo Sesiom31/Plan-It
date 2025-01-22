@@ -1,18 +1,19 @@
 export const steps = [
   {
     numberStep: 1,
-    title: "Registra tus tareas",
-    description: "Añade tus tareas diarias y asígnales una fecha y hora",
+    title: "Regístrate gratis",
+    description: "Crea una cuenta en PlanIt en segundos.",
   },
   {
     numberStep: 2,
-    title: "Revisa el pronóstico",
-    description: "Consulta el clima previsto para los próximos días",
+    title: "Crea tu primera lista",
+    description:
+      "Organiza tus tareas por proyectos, categorías o como prefieras.",
   },
   {
     numberStep: 3,
-    title: "Optimiza tu planificación",
+    title: "Añade tus tareas ",
     description:
-      "Ajusta tus tareas según las condiciones metereológicas esperadas",
+      "Define prioridades, establece fechas de vencimiento y comienza a dominar tu día.",
   },
 ];

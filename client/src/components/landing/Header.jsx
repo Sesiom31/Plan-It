@@ -1,18 +1,17 @@
-import { CloudIcon } from "@heroicons/react/24/outline";
 import LoginAuthButton from "../../ui/LoginAuthButton";
+import LogoH from "../../../public/ui/LogoH";
 
 function Header() {
   return (
-    <header className="h-20 bg-white bg-opacity-75">
-      <section className="flex h-full w-full items-center justify-between px-4">
-        <div className="flex items-center gap-2">
-          <CloudIcon className="h-6 w-6 font-bold text-sky-500" />
-          <h2 className="text-2xl font-bold text-gray-700">PlanIt</h2>
-        </div>
-        <div className="flex h-full items-center">
+    <header className="fixed left-0 right-0 top-0 z-50 h-20 bg-[#F57C00F4] px-4 sm:pr-6 lg:h-16">
+      <div className="flex h-full w-full items-center justify-between">
+        <figure className="flex h-full items-center">
+          <LogoH fill="#fff" className="aspect-auto h-16 w-full" />
+        </figure>
+        <nav className="flex h-full items-center">
           <LoginAuthButton />
-        </div>
-      </section>
+        </nav>
+      </div>
     </header>
   );
 }
