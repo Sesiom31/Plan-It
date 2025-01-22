@@ -10,7 +10,7 @@ function LandingPage() {
     <div className="h-auto w-full">
       <Header />
 
-      <main className="mt-20 lg:mt-16">
+      <main className="mt-[4.5rem] lg:mt-16">
         <Presentation />
         <Features />
         <Process />

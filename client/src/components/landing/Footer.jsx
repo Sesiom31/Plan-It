@@ -1,9 +1,9 @@
 function Footer() {
   return (
     <footer className="bg-[#AEE1F9]">
-      <div className="flex min-h-32 flex-col items-center justify-center">
+      <div className="flex min-h-28 flex-col items-center justify-center">
         <div>
-          <p className="text-center text-lg text-gray-600">
+          <p className="text-center text-[0.9rem] text-gray-600">
             © 2025 PlanIt. Todos los derechos reservados
           </p>
         </div>
