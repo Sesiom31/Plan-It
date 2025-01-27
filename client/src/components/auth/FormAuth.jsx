@@ -28,6 +28,14 @@ function FormAuth({
     try {
       await fetchAuth(data).unwrap();
     } catch (err) {
+      console.log(err);
+      if (err.status === "FETCH_ERROR") {
+        setError("notConnection", {
+          type: "manual",
+          message: "No hay conexión con el servidor",
+        });
+      }
+
       if (err.data?.message.includes("existe")) {
         setError("email", {
           type: "manual",
@@ -54,31 +62,34 @@ function FormAuth({
   ));
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="mb-2 flex h-auto flex-col">
-        {content}
-        <span className="h-6 w-full text-center text-sm font-bold text-red-500">
-          {errors["notUser"] && errors["notUser"].message}
+    <form onSubmit={handleSubmit(onSubmit)} className="w-full py-10">
+      <div className="h-auto">
+        <div className="flex flex-col gap-0.5">{content}</div>
+        <span className="my-4 block h-8 w-full text-center text-sm font-normal text-red-500">
+          {(errors["notUser"] && errors["notUser"].message) ||
+            (errors["notConnection"] && errors["notConnection"].message)}
         </span>
       </div>
 
-      <div>
-        <div>
+      <div className="mt-2">
+        <div className="h-14 w-full px-1">
           <button
-            className={`mt-4 h-12 w-full rounded-md bg-emerald-500 font-bold text-white ${isLoading ? "bg-opacity-80" : ""} relative flex items-center justify-center`}
+            className={`mx-auto h-full w-full max-w-[26rem] rounded-full bg-[#F57C00F4] font-semibold text-white ${isLoading ? "bg-opacity-80" : ""} relative flex items-center justify-center`}
             disabled={isLoading}
+            type="submit"
           >
             {" "}
             {nameButton}{" "}
             {isLoading && (
-              <LiaSpinnerSolid className="absolute right-8 h-6 w-6 animate-spin text-gray-900" />
+              <LiaSpinnerSolid className="absolute right-8 h-6 w-6 animate-spin text-white" />
             )}
           </button>
         </div>
-        <div className="mt-4 text-center">
+
+        <div className="mt-3 text-center">
           <p className="text-gray-500">
             {subtitle}{" "}
-            <Link className="font-bold text-gray-800 underline" to={toLink}>
+            <Link className="font-semibold text-gray-800 underline" to={toLink}>
               {optionLink}
             </Link>
           </p>

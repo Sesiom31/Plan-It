@@ -1,11 +1,8 @@
-.label-float span {
-  transition: all ease-in;
+.label-float {
+  transition: all 0.1s ease-in;
 }
 
-.input-auth:focus + .label-float span,
-.input-auth:not(:placeholder-shown) + .label-float span {
-  transform: translateY(-1.775rem);
-  color: rgb(13, 140, 224);
-  font-size: 0.8rem;
-  background-color: white;
+.input-auth:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 5rem red inset;
+  padding: 1rem;
 }

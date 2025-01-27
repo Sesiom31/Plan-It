@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 
 function ReturnIcon({ to }) {
   return (
-    <div className="mt-2 flex justify-start">
+    <div className="flex h-12 w-12 items-center justify-center">
       <Link to={to}>
-        <ArrowLeftIcon className="h-8 w-8 font-bold text-gray-900" />
+        <ArrowLeftIcon className="h-7 w-7 font-bold text-gray-600" />
       </Link>
     </div>
   );

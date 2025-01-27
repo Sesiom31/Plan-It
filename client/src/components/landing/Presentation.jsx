@@ -47,9 +47,6 @@ function Presentation() {
             className="hidden w-full lg:block"
           />
         </figure>
-        {/* <figure className="hidden lg:col-span-3 lg:col-start-3 lg:row-span-1 lg:row-start-3 lg:block lg:self-start">
-          <LogoV fill="orange" width="10rem" height="10rem" />
-        </figure> */}
 
         <div className="col-span-7 row-span-1 row-start-4 mx-auto my-2 self-start lg:col-span-3 lg:col-start-3 lg:row-span-2 lg:row-start-3 lg:mt-8 lg:self-center">
           <RegisterAuthButton />
