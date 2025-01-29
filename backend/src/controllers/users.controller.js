@@ -7,9 +7,9 @@ import jwt from "jsonwebtoken";
 const optionsToken = {
   httpOnly: true,
   secure: NODE_ENV === "production",
-  sameSite: "none",
+  sameSite: NODE_ENV === "production" ? "none" : "lax",
   path: "/",
-  maxAge: 60 * 60 * 24,
+  maxAge: 60 * 60 * 1000, // en milisegundos
 };
 
 export const userLogin = async (req, res) => {
@@ -45,9 +45,14 @@ export const userLogin = async (req, res) => {
 
     res.cookie("token", token, optionsToken);
 
-    res
-      .status(200)
-      .json({ success: true, message: "Inicio de sesión correcto" });
+    user.lastLogin = new Date();
+    await user.save();
+
+    res.status(200).json({
+      success: true,
+      message: "Inicio de sesión correcto",
+      username: user.username,
+    });
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
   }
@@ -75,6 +80,7 @@ export const userRegister = async (req, res) => {
       username,
       email,
       password,
+      lastLogin: new Date(),
     });
 
     await user.save();
@@ -86,7 +92,22 @@ export const userRegister = async (req, res) => {
 
     res.cookie("token", token, optionsToken);
 
-    res.status(200).json({ success: true, message: "Usuario creado" });
+    res.status(200).json({
+      success: true,
+      message: "Usuario creado",
+      username: user.username,
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+};
+
+export const userLogout = async (req, res) => {
+  try {
+    res.clearCookie("token", optionsToken);
+    res
+      .status(200)
+      .json({ success: true, message: "Cierre de sesión exitoso" });
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
   }

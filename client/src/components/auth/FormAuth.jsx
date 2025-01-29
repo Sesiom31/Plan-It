@@ -1,6 +1,7 @@
+import { Link, useNavigate } from "react-router-dom";
+
 import FieldForm from "../../ui/FieldForm";
 import { LiaSpinnerSolid } from "react-icons/lia";
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -24,9 +25,14 @@ function FormAuth({
     resolver: yupResolver(schema),
   });
 
+  const navigate = useNavigate();
+
+  console.log(isLoading);
+
   const onSubmit = async (data) => {
     try {
       await fetchAuth(data).unwrap();
+      await navigate("/tasks");
     } catch (err) {
       console.log(err);
       if (err.status === "FETCH_ERROR") {
@@ -43,7 +49,7 @@ function FormAuth({
         });
       }
 
-      if (err.data.message.includes("Credenciales")) {
+      if (err.data?.message.includes("Credenciales")) {
         setError("notUser", {
           type: "manual",
           message: "Credenciales incorrectas",

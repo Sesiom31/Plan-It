@@ -1,12 +1,18 @@
+import { useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useVerifyAuthQuery } from "../services/api";
 
 export const useAuth = () => {
-  const { isAuthenticated, user } = useSelector((state) => state.auth);
+  const location = useLocation().pathname;
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
 
-  const { isLoading, error } = useVerifyAuthQuery(undefined, {
+  console.log(location);
+
+  console.log({ isAuthenticated });
+
+  const { isLoading } = useVerifyAuthQuery(undefined, {
     skip: isAuthenticated,
   });
 
-  return { isAuthenticated, user, isLoading, error };
+  return { isAuthenticated, isLoading };
 };

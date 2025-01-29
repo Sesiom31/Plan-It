@@ -2,7 +2,7 @@ import { apiSlice } from "../services/api";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  user: null,
+  username: null,
   isAuthenticated: false,
 };
 
@@ -12,27 +12,44 @@ const authSlice = createSlice({
   reducers: {
     clearAuth: (state) => {
       state.isAuthenticated = false;
-      state.user = null;
+      state.username = null;
     },
   },
   extraReducers: (builder) => {
     builder
       .addMatcher(
         apiSlice.endpoints.verifyAuth.matchFulfilled,
-        (state, { payload }) => {
-          state.isAuthenticated = true;
-          state.user = payload.data?.user || null;
+        (state, action) => {
+          console.log({ action });
+          state.isAuthenticated = action.payload.success;
+          state.username = action.payload.user?.username;
         },
       )
-      .addMatcher(apiSlice.endpoints.verifyAuth.matchRejected, (state) => {
+      .addMatcher(
+        apiSlice.endpoints.verifyAuth.matchRejected,
+        (state, action) => {
+          console.log({ action: action.payload.data });
+          state.isAuthenticated = false;
+          state.username = null;
+        },
+      )
+      .addMatcher(
+        apiSlice.endpoints.registerUser.matchFulfilled,
+        (state, action) => {
+          state.isAuthenticated = true;
+          state.username = action.payload.username;
+        },
+      )
+      .addMatcher(
+        apiSlice.endpoints.loginUser.matchFulfilled,
+        (state, action) => {
+          state.isAuthenticated = true;
+          state.username = action.payload.username;
+        },
+      )
+      .addMatcher(apiSlice.endpoints.logoutUser.matchFulfilled, (state) => {
         state.isAuthenticated = false;
-        state.user = null;
-      })
-      .addMatcher(apiSlice.endpoints.registerUser.matchFulfilled, (state) => {
-        state.isAuthenticated = true;
-      })
-      .addMatcher(apiSlice.endpoints.loginUser.matchFulfilled, (state) => {
-        state.isAuthenticated = true;
+        state.username = null;
       });
   },
 });

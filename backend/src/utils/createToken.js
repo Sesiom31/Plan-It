@@ -18,6 +18,7 @@ export const createToken = (payload, options = {}) => {
     }
 
     const { expiresIn = "1h", ...restOptions } = options;
+    console.log(options);
 
     return jwt.sign(payload, SECRET_JWT, {
       expiresIn,
