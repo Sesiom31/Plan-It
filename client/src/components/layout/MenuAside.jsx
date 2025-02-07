@@ -1,4 +1,4 @@
-import LogoV from "../../../public/ui/Logov";
+import LogoV from "../../../public/ui/LogoV";
 
 function MenuAside() {
   return (
