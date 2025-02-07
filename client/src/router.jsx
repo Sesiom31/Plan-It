@@ -1,4 +1,5 @@
 import LandingPage from "./pages/LandingPage";
+import Layout from "./layouts/Layout";
 import Loading from "./ui/Loading";
 import LoginPage from "./pages/LoginPage";
 import { Navigate } from "react-router-dom";
@@ -12,16 +13,25 @@ export const routes = [
     path: "/",
     element: <PublicRoute />,
     children: [
-      { path: "/", element: <Navigate to="/home" replace /> },
+      { index: true, element: <Navigate to="/home" replace /> },
       { path: "/home", element: <LandingPage /> },
       { path: "/login", element: <LoginPage /> },
       { path: "/register", element: <RegisterPage /> },
       { path: "/loading", element: <Loading /> },
     ],
   },
+
   {
-    path: "/tasks",
+    path: "/",
     element: <ProtectedRoute />,
-    children: [{ path: "", element: <TasksPage /> }],
+    children: [
+      {
+        element: <Layout />,
+        children: [
+          { index: true, element: <Navigate to="/tasks" replace /> },
+          { path: "tasks", element: <TasksPage /> },
+        ],
+      },
+    ],
   },
 ];

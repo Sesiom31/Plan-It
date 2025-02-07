@@ -1,11 +1,5 @@
-import Header from "../components/tasks/Header";
-
 function TasksPage() {
-  return (
-    <div>
-      <Header />
-    </div>
-  );
+  return <div>Task</div>;
 }
 
 export default TasksPage;
