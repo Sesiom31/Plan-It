@@ -1,18 +1,23 @@
 import { MdLogout, MdSearch } from "react-icons/md";
 
+import LogoV from "../../../public/ui/LogoV";
+
 function Header() {
   return (
-    <header className="col-span-10 col-start-3">
-      <div className="flex h-full items-center justify-between">
+    <header className="col-span-12 col-start-1 row-span-1">
+      <div className="flex h-full items-center justify-between px-2">
+        <div className="">
+          <LogoV className="size-16" />
+        </div>
         <label
           htmlFor="search"
-          className="ml-1 flex h-8 rounded-md ring-1 focus-within:ring-sky-500"
+          className="ml-1 flex h-8 max-w-52 rounded-md ring-1 ring-gray-400 focus-within:ring-sky-500"
         >
           <input
             type="search"
             name="search"
             id="search"
-            className="peer flex h-full items-center rounded-md border-none px-2 outline-none focus:outline-none"
+            className="peer flex h-full w-[calc(100%-1.5rem)] items-center rounded-md border-none px-2 outline-none focus:outline-none"
           />
           <span className="flex items-center justify-center">
             <MdSearch className="h-6 w-6 text-gray-500" />

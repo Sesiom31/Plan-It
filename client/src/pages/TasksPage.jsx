@@ -1,5 +1,5 @@
 function TasksPage() {
-  return <div>Task</div>;
+  return <div>Tareas</div>;
 }
 
 export default TasksPage;

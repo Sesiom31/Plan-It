@@ -1,27 +1,18 @@
-import { CgMenu } from "react-icons/cg";
 import Header from "../components/layout/Header";
-import LogoV from "../../public/ui/LogoV";
-import MenuAside from "../components/layout/MenuAside";
+import MenuFooter from "../components/layout/MenuFooter";
 import { Outlet } from "react-router-dom";
 
 function Layout() {
   return (
     <div className="h-full w-full">
-      <div className="grid h-dvh max-h-[1200px] grid-cols-12 grid-rows-12">
-        <div className="col-span-2 col-start-1 row-span-1 row-start-1 self-center justify-self-center bg-white">
-          <LogoV className="size-16" />
-        </div>
-
-        <div className="col-span-2 col-start-1 row-span-1 row-start-2 self-center justify-self-center bg-white">
-          <CgMenu className="h-6 w-6 text-orange-500" />
-        </div>
-
-        <MenuAside />
+      <div className="grid h-screen max-h-[1000px] grid-cols-12 grid-rows-12">
         <Header />
 
-        <main className="col-span-10 col-start-3 row-span-11 row-start-2">
+        <main className="col-span-12 col-start-1 row-span-10 row-start-2">
           <Outlet />
         </main>
+
+        <MenuFooter />
       </div>
     </div>
   );
