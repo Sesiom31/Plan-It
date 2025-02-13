@@ -2,7 +2,7 @@ import { MdLogout, MdSearch } from "react-icons/md";
 
 function Header() {
   return (
-    <header className="h-16 w-full bg-white p-2">
+    <header className="col-span-10 col-start-3">
       <div className="flex h-full items-center justify-between">
         <label
           htmlFor="search"
