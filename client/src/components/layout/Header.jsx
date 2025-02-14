@@ -4,8 +4,8 @@ import LogoV from "../../../public/ui/LogoV";
 
 function Header() {
   return (
-    <header className="col-span-12 col-start-1 row-span-1">
-      <div className="flex h-full items-center justify-between px-2">
+    <header className="h-auto">
+      <div className="flex h-16 items-center justify-between px-2">
         <div className="">
           <LogoV className="size-16" />
         </div>

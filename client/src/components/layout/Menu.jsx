@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
 import { menus } from "../../data/menusAside";
 
-function MenuFooter() {
+function Menu() {
   const content = menus.map((menu) => (
     <li
       key={menu.name}
-      className="col-span-1 h-full self-center justify-self-center"
+      className="flex h-full flex-1 items-center justify-center"
     >
       <NavLink
         className={({ isActive }) =>
@@ -21,14 +21,14 @@ function MenuFooter() {
     </li>
   ));
   return (
-    <aside className="col-span-12 col-start-1 row-span-1 row-start-12 flex items-center border-t border-orange-500">
+    <div className="h-16">
       <div className="h-full w-full">
         <nav className="h-full p-1">
-          <ul className="grid h-full grid-cols-5">{content}</ul>
+          <ul className="item-center flex h-full">{content}</ul>
         </nav>
       </div>
-    </aside>
+    </div>
   );
 }
 
-export default MenuFooter;
+export default Menu;
