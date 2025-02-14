@@ -4,17 +4,15 @@ import { Outlet } from "react-router-dom";
 
 function Layout() {
   return (
-    <div className="">
-      <div className="flex h-dvh max-h-[75rem] flex-col">
+    <div className="h-dvh">
+      <div className="relative flex h-full max-h-dvh flex-col">
         <Header />
 
-        <div className="h-[calc(100%-4rem)]">
-          <main className="h-[calc(100%-4rem)] border-y border-orange-500">
-            <Outlet />
-          </main>
+        <main className="my-16 h-full border-y border-orange-500">
+          <Outlet />
+        </main>
 
-          <Menu />
-        </div>
+        <Menu />
       </div>
     </div>
   );

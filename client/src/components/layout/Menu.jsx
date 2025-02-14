@@ -10,8 +10,8 @@ function Menu() {
       <NavLink
         className={({ isActive }) =>
           isActive
-            ? "flex aspect-square h-full flex-col items-center justify-center gap-1 rounded-md border border-orange-500"
-            : "flex aspect-square h-full flex-col items-center justify-center gap-1 rounded-md bg-transparent"
+            ? "flex h-full w-16 flex-col items-center justify-center gap-1 rounded-md border border-orange-500"
+            : "flex h-full w-16 flex-col items-center justify-center gap-1 rounded-md bg-transparent"
         }
         to={menu.path}
       >
@@ -21,7 +21,7 @@ function Menu() {
     </li>
   ));
   return (
-    <div className="h-16">
+    <div className="absolute bottom-0 left-0 h-16 w-full">
       <div className="h-full w-full">
         <nav className="h-full p-1">
           <ul className="item-center flex h-full">{content}</ul>
