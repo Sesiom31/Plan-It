@@ -1,18 +1,11 @@
 import PropTypes from "prop-types";
 
-function LogoH({
-  fill = "orange",
-  width = "auto",
-  height = "100%",
-  className = "",
-}) {
+function LogoH({ fill = "orange", className = "", classNameText = "" }) {
   return (
     <svg
       viewBox=" 0 0 400 200"
       xmlns="http://www.w3.org/2000/svg"
       fill={fill}
-      width={width}
-      height={height}
       className={className}
     >
       <title>Logo PlanIt</title>
@@ -48,12 +41,7 @@ function LogoH({
         fill={fill}
       />
 
-      <text
-        x="175"
-        y="135"
-        fill={fill}
-        style={{ fontSize: "4.5rem", fontWeight: "600" }}
-      >
+      <text x="175" y="135" fill={fill} className={classNameText}>
         PlanIt
       </text>
     </svg>
@@ -62,9 +50,8 @@ function LogoH({
 
 LogoH.propTypes = {
   fill: PropTypes.string,
-  width: PropTypes.string,
-  height: PropTypes.string,
-  className: PropTypes.string,
+  className: PropTypes.string.isRequired,
+  classNameText: PropTypes.string.isRequired,
 };
 
 export default LogoH;

@@ -10,18 +10,18 @@ function Menu() {
       <NavLink
         className={({ isActive }) =>
           isActive
-            ? "flex h-full w-16 flex-col items-center justify-center gap-1 rounded-md border border-orange-500"
+            ? "flex h-full w-16 flex-col items-center justify-center gap-1 rounded-md border border-[#ffffff] bg-azul-secundario"
             : "flex h-full w-16 flex-col items-center justify-center gap-1 rounded-md bg-transparent"
         }
         to={menu.path}
       >
-        <menu.icon className="h-5 w-5 text-orange-500" />
-        <span className="text-center text-xs text-orange-500">{menu.name}</span>
+        <menu.icon className="h-5 w-5 text-[#ffffff]" />
+        <span className="text-center text-xs text-[#ffffff]">{menu.name}</span>
       </NavLink>
     </li>
   ));
   return (
-    <div className="absolute bottom-0 left-0 h-16 w-full">
+    <div className="absolute bottom-0 left-0 h-16 w-full bg-azul-principal">
       <div className="h-full w-full">
         <nav className="h-full p-1">
           <ul className="item-center flex h-full">{content}</ul>

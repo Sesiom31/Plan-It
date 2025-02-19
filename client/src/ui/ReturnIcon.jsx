@@ -6,7 +6,7 @@ function ReturnIcon({ to }) {
   return (
     <div className="flex h-12 w-12 items-center justify-center">
       <Link to={to}>
-        <ArrowLeftIcon className="h-7 w-7 font-bold text-gray-600" />
+        <ArrowLeftIcon className="text-gris-medio h-7 w-7 font-bold" />
       </Link>
     </div>
   );

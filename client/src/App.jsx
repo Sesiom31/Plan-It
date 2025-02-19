@@ -1,4 +1,5 @@
 import "./styles/transitions.css";
+import "./styles/inputs.css";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 

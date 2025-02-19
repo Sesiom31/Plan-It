@@ -6,10 +6,10 @@ function Features() {
     <FeatureCard key={feature.title} feature={feature} />
   ));
   return (
-    <section className="h-auto p-4">
+    <section className="text-gris-oscuro h-auto p-4">
       <div className="min-h-[40rem]">
         <div className="mt-8 md:mt-12 lg:mt-8">
-          <h2 className="text-center text-3xl font-medium text-gray-800 md:text-4xl">
+          <h2 className="text-center text-3xl font-medium md:text-4xl">
             Características principales
           </h2>
         </div>

@@ -2,11 +2,11 @@ import PropTypes from "prop-types";
 
 function HeadAuth({ title, subtitle }) {
   return (
-    <div className="mt-10 text-center">
-      <h1 className="text-2xl font-normal tracking-wider text-gray-800 md:text-3xl md:font-bold lg:text-4xl lg:tracking-normal">
-        {title}
+    <div className="text-gris-oscuro mt-10 text-center">
+      <h1 className="text-2xl font-normal tracking-wider md:text-3xl md:font-bold lg:text-4xl lg:tracking-normal">
+        {title} <span className="text-azul-principal font-bold">PlanIt</span>
       </h1>
-      <p className="mt-1.5 text-gray-500">{subtitle}</p>
+      <p className="text-gris-text mt-1.5">{subtitle}</p>
     </div>
   );
 }

@@ -1,0 +1,20 @@
+input[name="search"]:-webkit-autofill,
+input[name="search"]:-webkit-autofill:hover,
+input[name="search"]:-webkit-autofill:focus,
+input[name="search"]:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #0077b6 inset !important;
+  background-color: #0077b6 !important;
+  outline: #0077b6 !important;
+  border: #0077b6 !important;
+}
+
+/* Para otros navegadores */
+
+input[name="search"]:autofill,
+input[name="search"]:autofill:hover,
+input[name="search"]:autofill:focus,
+input[name="search"]:autofill:active {
+  background-color: #0077b6 !important;
+  outline: #0077b6 !important;
+  border: #0077b6 !important;
+}

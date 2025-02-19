@@ -7,16 +7,17 @@ import welcome_right from "../../assets/welcome-right.png";
 
 function Presentation() {
   return (
-    <section className="h-auto w-full">
+    <section className="text-gris-oscuro h-auto w-full">
       <div className="grid min-h-[32rem] grid-cols-7 grid-rows-[repeat(4,auto)] place-items-center py-6 lg:max-h-[40rem]">
         <div className="col-span-7 row-span-1 mx-auto my-4 text-center">
-          <h1 className="h-full px-4 py-1 text-4xl font-medium tracking-wider text-gray-800 md:text-5xl lg:text-6xl lg:font-normal">
-            Domina tu día con PlanIt
+          <h1 className="h-full px-4 py-1 text-4xl font-medium tracking-wider md:text-5xl lg:text-6xl lg:font-normal">
+            Domina tu día con{" "}
+            <span className="text-azul-principal font-bold"> PlanIt</span>
           </h1>
         </div>
 
         <div className="col-span-7 row-span-1 my-6 self-start text-center lg:col-span-3 lg:col-start-3 lg:row-start-2 lg:mt-12 lg:h-24">
-          <h2 className="mx-auto px-4 text-center text-gray-500 md:px-12">
+          <h2 className="text-gris-text mx-auto px-4 text-center md:px-12">
             PlanIt te proporciona una herramienta intuitiva para gestionar tus
             tareas diarias. Desde pequeñas listas hasta grandes proyectos,
             PlanIt te permite mantener el control y enfocarte en lo que

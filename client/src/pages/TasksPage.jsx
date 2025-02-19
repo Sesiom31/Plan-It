@@ -1,5 +1,13 @@
+import TaskHeader from "../components/tasks/TaskHeader";
+
 function TasksPage() {
-  return <div>Tareas</div>;
+  return (
+    <section className="relative h-full">
+      <div className="h-full">
+        <TaskHeader />
+      </div>
+    </section>
+  );
 }
 
 export default TasksPage;

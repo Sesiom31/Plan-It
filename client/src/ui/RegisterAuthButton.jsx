@@ -4,7 +4,7 @@ function RegisterAuthButton() {
   return (
     <Link
       to="/register"
-      className="flex h-12 w-40 items-center justify-center rounded-md bg-[#F57C00] px-4 tracking-wider text-white"
+      className="bg-azul-principal flex h-12 w-40 items-center justify-center rounded-md px-4 tracking-wider text-[#ffffff]"
     >
       Empezar
     </Link>

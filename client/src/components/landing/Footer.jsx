@@ -1,14 +1,14 @@
 function Footer() {
   return (
-    <footer className="bg-[#AEE1F9]">
-      <div className="flex min-h-28 flex-col items-center justify-center">
+    <footer className="bg-azul-principal">
+      <div className="flex min-h-20 flex-col items-center justify-center">
         <div>
-          <p className="text-center text-[0.9rem] text-gray-600">
+          <p className="text-center text-[1rem] text-[#ffffff]">
             © 2025 PlanIt. Todos los derechos reservados
           </p>
         </div>
         <div>
-          <span className="block text-center text-sm text-gray-500">
+          <span className="block text-center text-sm text-naranja-suave">
             Creado por LeCorbusi3r
           </span>
         </div>

@@ -6,10 +6,10 @@ function Process() {
     <ProcessCard step={step} key={step.title} />
   ));
   return (
-    <section className="h-auto p-4">
+    <section className="text-gris-oscuro h-auto p-4">
       <div className="min-h-[40rem] lg:min-h-[28rem]">
         <div className="mt-8 sm:mt-4 md:mt-12 lg:mt-20">
-          <h2 className="text-center text-3xl font-medium text-gray-800 md:text-4xl">
+          <h2 className="text-center text-3xl font-medium md:text-4xl">
             ¿Cómo funciona?
           </h2>
         </div>

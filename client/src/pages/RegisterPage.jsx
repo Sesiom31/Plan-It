@@ -10,7 +10,7 @@ function RegisterPage() {
   const [onRegister, { isLoading }] = useRegisterUserMutation();
 
   return (
-    <section className="h-dvh w-full bg-white lg:flex">
+    <section className="h-dvh w-full bg-[#ffffff] lg:flex">
       <div
         className="hidden h-full w-[50%] lg:block lg:bg-cover lg:bg-center lg:bg-no-repeat"
         style={{ backgroundImage: `url(${fondo})` }}
@@ -23,7 +23,7 @@ function RegisterPage() {
 
         <div className="mx-auto mt-10 w-full">
           <HeadAuth
-            title="Crea tu cuenta en PlanIt"
+            title="Crea tu cuenta en"
             subtitle="Ingresa tus datos para registrarte"
           />
 

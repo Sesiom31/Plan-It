@@ -10,7 +10,7 @@ function LoginPage() {
   const [onLogin, { isLoading }] = useLoginUserMutation();
 
   return (
-    <section className="h-dvh w-full bg-white lg:flex">
+    <section className="h-dvh w-full bg-[#ffffff] lg:flex">
       <div
         className="hidden h-full w-[50%] lg:block lg:bg-cover lg:bg-center lg:bg-no-repeat"
         style={{ backgroundImage: `url(${fondo})` }}
@@ -23,7 +23,7 @@ function LoginPage() {
 
         <div className="mx-auto mt-10 w-full">
           <HeadAuth
-            title="Bienvenido de vuelta a PlanIt"
+            title="Bienvenido de vuelta a"
             subtitle="Ingresa tus credenciales para acceder"
           />
 
