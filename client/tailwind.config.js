@@ -5,10 +5,15 @@ export default {
     extend: {
       fontFamily: {
         Inter: ["Inter", "sans-serif"],
+        Fredoka: ["Fredoka", "sans-serif"],
+        FredokaExpanded: ["Fredoka Expanded", "sans-serif"],
+        TorokaCondensed: ["Toroka Condensed", "sans-serif"],
+        Toroka: ["Toroka", "sans-serif"],
       },
       colors: {
         // Colores personalizados
-        "azul-principal": "#004E8A",
+        //"azul-principal": "#004E8A",
+        "azul-principal": "#ff8c42",
         "azul-secundario": "#0077B6",
         "azul-terciario": "#3180CE",
         "azul-cuaternario": "#72ABF0",

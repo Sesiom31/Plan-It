@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 function Layout() {
   return (
-    <div className="h-dvh overflow-y-hidden">
+    <div className="h-dvh max-h-dvh w-full">
       <div className="relative flex h-full max-h-dvh flex-col">
         <Header />
 

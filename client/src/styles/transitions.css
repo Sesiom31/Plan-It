@@ -41,3 +41,28 @@
   pointer-events: auto;
   transform: translate(0px, 0px);
 }
+
+/* Add task div/form */
+
+.form-add-hidden {
+  visibility: hidden;
+  /* transition: visibility 0.2s ease-in-out; */
+}
+
+.form-add-visible {
+  visibility: visible;
+}
+
+.add-task {
+  transform: translateY(100vh);
+  visibility: hidden;
+
+  transition:
+    transform 0.2s ease-in-out,
+    visibility 0.2s ease-in-out;
+}
+
+.add-task.open-add-task {
+  visibility: visible;
+  transform: translateY(0px);
+}

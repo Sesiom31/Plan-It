@@ -6,7 +6,7 @@ function TaskHeader() {
 
   return (
     <div className="flex w-full flex-col gap-4 p-4 text-gris-oscuro">
-      <div className="h-16">
+      <div className="h-[4.5rem] py-1">
         <h1 className="text-4xl font-bold">Tareas</h1>
         <span className="text-[0.9rem] text-gris-text">{dateToday}</span>
       </div>

@@ -18,3 +18,10 @@ input[name="search"]:autofill:active {
   outline: #0077b6 !important;
   border: #0077b6 !important;
 }
+
+/* textarea */
+
+textarea {
+  field-sizing: content;
+  resize: none;
+}
