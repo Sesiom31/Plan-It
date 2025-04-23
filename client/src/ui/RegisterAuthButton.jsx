@@ -4,9 +4,9 @@ function RegisterAuthButton() {
   return (
     <Link
       to="/register"
-      className="bg-azul-principal flex h-12 w-40 items-center justify-center rounded-md px-4 tracking-wider text-[#ffffff]"
+      className="flex h-full w-full items-center justify-center rounded-md bg-gradient-to-bl from-[#5433fd] to-[#35d6dd] px-4 font-bold text-main"
     >
-      Empezar
+      Empezar con una cuenta
     </Link>
   );
 }

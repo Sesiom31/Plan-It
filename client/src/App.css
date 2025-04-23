@@ -2,10 +2,8 @@
   overflow-x: hidden;
   overflow-y: auto;
 }
+
 #root {
   width: 100vw;
-  min-height: 100vh;
-  font-family: "Inter, sans-serif";
-  font-weight: normal;
-  font-style: normal;
+  height: auto;
 }

@@ -1,12 +1,13 @@
-import LogoV from "../../public/ui/LogoV";
+import LogoH from "../assets/logos/LogoH";
 
 function Loading() {
   return (
-    <div className="pulse-loading relative flex min-h-dvh flex-col items-center justify-center bg-[#2c2c2c]">
-      <LogoV fill="#F57C00F4" width="15rem" height="15rem" className="pulse" />
-      <h2 className="h-auto p-1 text-center text-5xl font-bold text-[#F57C00F4]">
-        PlanIt
-      </h2>
+    <div className="pulse-loading relative flex min-h-dvh flex-col items-center justify-center bg-gradient-to-tr from-main to-secondary text-white">
+      <LogoH
+        fill="#ffffff"
+        className="pulse h-36"
+        classNameText="text-5xl font-bold tracking-wide"
+      />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { MdLogout, MdSearch } from "react-icons/md";
 
-import LogoV from "../../../public/ui/LogoV";
+import LogoV from "../../assets/logos/LogoV";
 
 function Header() {
   return (

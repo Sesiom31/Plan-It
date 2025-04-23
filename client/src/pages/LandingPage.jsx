@@ -7,10 +7,10 @@ import Process from "../components/landing/Process";
 
 function LandingPage() {
   return (
-    <div className="h-auto w-full">
+    <div className="h-auto min-h-dvh w-full text-white">
       <Header />
 
-      <main className="mt-[4.5rem] lg:mt-16">
+      <main className="h-auto pt-[4.5rem] md:pt-[4rem]">
         <Presentation />
         <Features />
         <Process />

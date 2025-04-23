@@ -9,7 +9,7 @@ const router = createBrowserRouter(routes);
 
 function App() {
   return (
-    <div className="h-auto min-h-dvh bg-[#004E8A]">
+    <div className="h-auto w-full bg-main font-Toroka">
       <div className="mx-auto">
         <RouterProvider router={router} />
       </div>

@@ -1,20 +1,20 @@
 import LoginAuthButton from "../../ui/LoginAuthButton";
-import LogoH from "../../../public/ui/LogoH";
+import LogoH from "../../assets/logos/LogoH";
 
 function Header() {
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 h-[4.5rem] bg-azul-principal lg:h-16">
-      <div className="flex h-full w-full items-center justify-between px-4 sm:pr-6">
+    <header className="fixed left-0 right-0 top-0 z-50 h-[4.5rem] bg-gradient-to-r from-oscuro to-contrast sm:px-4 md:h-[4rem]">
+      <div className="flex h-full w-full items-center justify-between px-4">
         <div className="flex h-full items-center">
           <LogoH
             fill="#ffffff"
-            className="aspect-auto h-16 w-full"
-            classNameText="text-[4.5rem] font-semibold"
+            className="aspect-auto h-14 w-full"
+            classNameText="text-[4.5rem] font-bold "
           />
         </div>
-        <nav className="flex h-full items-center">
+        <div className="flex h-full items-center">
           <LoginAuthButton />
-        </nav>
+        </div>
       </div>
     </header>
   );

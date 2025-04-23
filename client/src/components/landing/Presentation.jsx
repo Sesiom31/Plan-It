@@ -1,62 +1,48 @@
 /* import LogoV from "../../../public/ui/LogoV"; */
 
+import InvitedAuth from "../auth/InvitedAuth";
 import RegisterAuthButton from "../../ui/RegisterAuthButton";
-import welcome_center from "../../assets/welcome-center.png";
-import welcome_left from "../../assets/welcome-left.png";
-import welcome_right from "../../assets/welcome-right.png";
+import lp_1 from "../../assets/lp.png";
 
 function Presentation() {
   return (
-    <section className="h-auto w-full text-gris-oscuro">
-      <div className="grid min-h-[32rem] grid-cols-7 grid-rows-[repeat(4,auto)] place-items-center py-6 lg:max-h-[40rem]">
-        <div className="col-span-7 row-span-1 mx-auto my-4 space-y-3 text-center">
-          <h1
-            className="font-Toroka h-full px-4 py-1 text-6xl font-bold md:text-6xl lg:text-6xl"
+    <section className="h-auto w-full">
+      <div className="flex min-h-[32rem] flex-col gap-10 pb-8 pt-4 sm:pt-10 lg:h-[calc(100vh-4rem)] lg:min-h-[36rem] lg:pt-12">
+        <h1
+          className="h-auto px-8 py-4 text-left font-Toroka text-5xl font-bold leading-tight sm:text-center sm:text-6xl md:text-[4rem] lg:text-7xl"
+          role="heading"
+        >
+          Organiza tu día con{" "}
+          <span
+            className="bg-gradient-to-tr from-[#35d6dd] to-[#5433fd] bg-clip-text font-bold text-transparent"
             role="heading"
           >
-            Platform for Storage{" "}
-            <span className="font-bold text-azul-principal" role="heading">
-              {" "}
-              and Sharing Videos
-            </span>
-          </h1>
+            {" "}
+            PlanIt
+          </span>
+        </h1>
+
+        <div className="mx-auto h-auto w-full max-w-[32rem]">
+          <figure className="block h-auto w-full">
+            <img
+              src={lp_1}
+              alt="Imagen central de bienvenida de microsoft"
+              className="mx-auto block aspect-auto h-auto w-[75%]"
+            />
+
+            <figcaption className="mt-4 text-center text-sm text-gray-400">
+              +100 tareas completadas por usuarios esta semana
+            </figcaption>
+          </figure>
         </div>
 
-        <div className="col-span-7 row-span-1 my-6 self-start text-center lg:col-span-3 lg:col-start-3 lg:row-start-2 lg:mt-12 lg:h-24">
-          <h2 className="mx-auto px-4 text-center text-gris-text md:px-12">
-            PlanIt te proporciona una herramienta intuitiva para gestionar tus
-            tareas diarias. Desde pequeñas listas hasta grandes proyectos,
-            PlanIt te permite mantener el control y enfocarte en lo que
-            realmente importa.
-          </h2>
-        </div>
-
-        <figure className="col-span-7 row-span-1 mx-auto mt-12 aspect-[4/3] lg:hidden">
-          <img
-            src={welcome_center}
-            alt="Imagen central de bienvenida de microsoft"
-            className="mx-auto block w-[20rem] bg-transparent lg:hidden"
-          />
-        </figure>
-
-        <figure className="ml-40 hidden w-64 lg:col-span-2 lg:col-start-1 lg:row-span-3 lg:row-start-2 lg:block lg:self-end">
-          <img
-            src={welcome_left}
-            alt="Imagen izquierda de bienvenida de microsoft"
-            className="hidden w-full lg:block"
-          />
-        </figure>
-
-        <figure className="mr-28 hidden w-48 lg:col-span-2 lg:col-start-6 lg:row-span-3 lg:row-start-2 lg:block lg:self-end">
-          <img
-            src={welcome_right}
-            alt="Imagen derecha de bienvenida de microsoft"
-            className="hidden w-full lg:block"
-          />
-        </figure>
-
-        <div className="col-span-7 row-span-1 row-start-4 mx-auto my-2 self-start lg:col-span-3 lg:col-start-3 lg:row-span-2 lg:row-start-3 lg:mt-8 lg:self-center">
-          <RegisterAuthButton />
+        <div className="mx-auto mt-2 flex flex-col gap-8 py-2 sm:flex-row sm:gap-12 md:gap-20 lg:mt-0">
+          <div className="h-12 w-60">
+            <RegisterAuthButton />
+          </div>
+          <div className="h-12 w-60">
+            <InvitedAuth optionalClass="rounded-md" />
+          </div>
         </div>
       </div>
     </section>
