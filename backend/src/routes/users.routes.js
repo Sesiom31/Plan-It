@@ -1,5 +1,6 @@
 import { loginSchema, registerSchema } from "../schemas/userAuth.schema.js";
 import {
+  userGuest,
   userLogin,
   userLogout,
   userRegister,
@@ -14,6 +15,7 @@ const router = Router();
 router.get("/verifyToken", verifyToken);
 router.post("/register", validateData(registerSchema), userRegister);
 router.post("/login", validateData(loginSchema), userLogin);
+router.post("/guest", userGuest);
 router.post("/logout", userLogout);
 
 export default router;

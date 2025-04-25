@@ -4,15 +4,14 @@ import { Outlet } from "react-router-dom";
 
 function Layout() {
   return (
-    <div className="h-dvh max-h-dvh w-full">
-      <div className="relative flex h-full max-h-dvh flex-col">
+    <div className="h-auto w-full bg-gradient-to-tr from-main to-dividers">
+      <div className="h-dvh max-h-dvh w-full">
         <Header />
+        <div className="relative h-[calc(100%-4.5rem)]">
+          <main className="h-full">{/* <Outlet /> */}</main>
 
-        <main className="my-16 h-full">
-          <Outlet />
-        </main>
-
-        <Menu />
+          <Menu />
+        </div>
       </div>
     </div>
   );

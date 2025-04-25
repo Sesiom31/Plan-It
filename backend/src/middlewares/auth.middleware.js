@@ -1,6 +1,7 @@
 import { SECRET_JWT } from "../config/env.js";
 import jwt from "jsonwebtoken";
 
+// verificar si existe el token y si es valido
 export const authMiddleware = (req, res, next) => {
   const token = req.cookies.token;
 

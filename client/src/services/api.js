@@ -33,6 +33,13 @@ export const apiSlice = createApi({
         method: "POST",
       }),
     }),
+
+    guestUser: builder.mutation({
+      query: () => ({
+        url: "auth/guest",
+        method: "POST",
+      }),
+    }),
   }),
 });
 
@@ -41,4 +48,5 @@ export const {
   useRegisterUserMutation,
   useLoginUserMutation,
   useLogoutUserMutation,
+  useGuestUserMutation,
 } = apiSlice;

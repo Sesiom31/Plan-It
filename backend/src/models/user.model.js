@@ -18,8 +18,14 @@ const userSchema = new mongoose.Schema(
     },
     password: { type: String, required: true, minLength: 6 },
     lastLogin: { type: Date },
+    isGuest: { type: Boolean, default: false },
   },
   { timestamps: true }
+);
+
+userSchema.index(
+  { createdAt: 1 },
+  { expireAfterSeconds: 60, partialFilterExpression: { isGuest: true } }
 );
 
 userSchema.pre("save", async function (next) {

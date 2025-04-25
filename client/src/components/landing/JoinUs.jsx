@@ -21,10 +21,10 @@ function JoinUs() {
         </div>
 
         <div className="mx-auto mt-12 flex h-auto flex-col items-center gap-8 py-2 sm:flex-row sm:justify-center sm:gap-12 md:gap-20">
-          <div className="h-12 w-60">
+          <div className="h-12 w-64">
             <RegisterAuthButton />
           </div>
-          <div className="h-12 w-60">
+          <div className="h-12 w-64">
             <InvitedAuth optionalClass="rounded-md" />
           </div>
         </div>

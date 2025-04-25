@@ -37,10 +37,10 @@ function Presentation() {
         </div>
 
         <div className="mx-auto mt-2 flex flex-col gap-8 py-2 sm:flex-row sm:gap-12 md:gap-20 lg:mt-0">
-          <div className="h-12 w-60">
+          <div className="h-12 w-64">
             <RegisterAuthButton />
           </div>
-          <div className="h-12 w-60">
+          <div className="h-12 w-64">
             <InvitedAuth optionalClass="rounded-md" />
           </div>
         </div>

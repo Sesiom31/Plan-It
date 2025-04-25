@@ -113,6 +113,35 @@ export const userLogout = async (req, res) => {
   }
 };
 
+export const userGuest = async (req, res) => {
+  try {
+    const guest = new User({
+      username: `guest_${Date.now()}`,
+      email: `guest_${Date.now()}@example.com`,
+      password: `guest_${Date.now()}`,
+      lastLogin: new Date(),
+      isGuest: true,
+    });
+
+    await guest.save();
+
+    const token = createToken(
+      { id: guest._id, username: guest.username },
+      { expiresIn: EXPIRE_TOKEN_IN }
+    );
+
+    res.cookie("token", token, optionsToken);
+
+    res.status(200).json({
+      success: true,
+      message: "Usuario invitado creado",
+      username: guest.username,
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+};
+
 export const verifyToken = async (req, res) => {
   const token = req.cookies.token;
   console.log("Hola");
