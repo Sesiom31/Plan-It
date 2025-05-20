@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 
-import FieldForm from "../../ui/FieldForm";
+import FieldForm from "../../ui/auth/FieldForm";
 import { LiaSpinnerSolid } from "react-icons/lia";
 import PropTypes from "prop-types";
 import { useForm } from "react-hook-form";

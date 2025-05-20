@@ -8,10 +8,10 @@ import {
 } from "react-icons/md";
 
 export const categoriesTask = [
-  { name: "Todas", icon: MdList },
-  { name: "Hoy", icon: MdToday },
-  { name: "Próximas", icon: MdEvent },
-  { name: "Completadas", icon: MdCheckCircle },
-  { name: "Importantes", icon: MdStar },
-  { name: "Pasadas", icon: MdHistory },
+  { name: "Todas", icon: MdList, cant: 23 },
+  { name: "Hoy", icon: MdToday, cant: 5 },
+  { name: "Planeadas", icon: MdEvent, cant: 1 },
+  { name: "Completadas", icon: MdCheckCircle, cant: 4 },
+  { name: "Importantes", icon: MdStar, cant: 6 },
+  { name: "Pasadas", icon: MdHistory, cant: 6 },
 ];

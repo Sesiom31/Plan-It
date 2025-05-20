@@ -1,4 +1,5 @@
 import CalendarPage from "./pages/CalendarPage";
+import CategoriesTasks from "./components/tasks/CategoriesTasks";
 import DashboardPage from "./pages/DashboardPage";
 import LandingPage from "./pages/LandingPage";
 import Layout from "./layouts/Layout";
@@ -10,6 +11,7 @@ import ProjectsPage from "./pages/ProjectsPage";
 import ProtectedRoute from "./components/routes/ProtectedRoute";
 import PublicRoute from "./components/routes/PublicRoute";
 import RegisterPage from "./pages/RegisterPage";
+import TasksHome from "./components/tasks/TasksHome";
 import TasksPage from "./pages/TasksPage";
 
 export const routes = [
@@ -33,7 +35,14 @@ export const routes = [
         element: <Layout />,
         children: [
           { index: true, element: <Navigate to="/tasks" replace /> },
-          { path: "tasks", element: <TasksPage /> },
+          {
+            path: "/tasks",
+            element: <TasksPage />,
+            children: [
+              { index: true, element: <TasksHome /> },
+              { path: "categories", element: <CategoriesTasks /> },
+            ],
+          },
           { path: "projects", element: <ProjectsPage /> },
           { path: "calendar", element: <CalendarPage /> },
           { path: "notes", element: <NotesPage /> },

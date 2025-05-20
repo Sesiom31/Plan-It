@@ -5,9 +5,9 @@ import { MdOutlineSpaceDashboard } from "react-icons/md";
 import { VscCalendar } from "react-icons/vsc";
 
 export const menus = [
-  { name: "Tareas", icon: GrTask, path: "/tasks" },
-  { name: "Proyectos", icon: GrProjects, path: "/projects" },
-  { name: "Calendario", icon: VscCalendar, path: "/calendar" },
-  { name: "Notas", icon: CgNotes, path: "/notes" },
-  { name: "Panel", icon: MdOutlineSpaceDashboard, path: "/dashboard" },
+  { label: "Tareas", icon: GrTask, to: "/tasks" },
+  { label: "Proyectos", icon: GrProjects, to: "/projects" },
+  { label: "Calendario", icon: VscCalendar, to: "/calendar" },
+  { label: "Notas", icon: CgNotes, to: "/notes" },
+  { label: "Panel", icon: MdOutlineSpaceDashboard, to: "/dashboard" },
 ];

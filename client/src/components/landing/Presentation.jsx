@@ -1,7 +1,7 @@
 /* import LogoV from "../../../public/ui/LogoV"; */
 
 import InvitedAuth from "../auth/InvitedAuth";
-import RegisterAuthButton from "../../ui/RegisterAuthButton";
+import RegisterAuthButton from "../../ui/landing/RegisterAuthButton";
 import lp_1 from "../../assets/lp.png";
 
 function Presentation() {

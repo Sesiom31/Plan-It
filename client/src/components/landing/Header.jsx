@@ -1,4 +1,4 @@
-import LoginAuthButton from "../../ui/LoginAuthButton";
+import LoginAuthButton from "../../ui/landing/LoginAuthButton";
 import LogoH from "../../assets/logos/LogoH";
 
 function Header() {

@@ -1,4 +1,4 @@
-import FeatureCard from "../../ui/FeatureCard";
+import FeatureCard from "../../ui/landing/FeatureCard";
 import { featuresPlanIt as features } from "../../data/featuresPlanIt";
 
 function Features() {

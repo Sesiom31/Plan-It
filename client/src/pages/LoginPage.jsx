@@ -1,7 +1,7 @@
 import FormAuth from "../components/auth/FormAuth";
 import HeadAuth from "../components/auth/HeadAuth";
 import InvitedAuth from "../components/auth/InvitedAuth";
-import ReturnIcon from "../ui/ReturnIcon";
+import ReturnIcon from "../ui/auth/ReturnIcon";
 import fondo from "../assets/fondo-todo.webp";
 import { inputsLogin } from "../data/inputsLogin";
 import { loginSchema } from "../schemas/userAuth.schema";

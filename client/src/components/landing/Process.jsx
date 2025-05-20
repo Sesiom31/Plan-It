@@ -1,4 +1,4 @@
-import ProcessCard from "../../ui/ProcessCard";
+import ProcessCard from "../../ui/landing/ProcessCard";
 import { steps } from "../../data/stepsProcess";
 
 function Process() {

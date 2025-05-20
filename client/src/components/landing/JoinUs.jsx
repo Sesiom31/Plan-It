@@ -1,5 +1,5 @@
 import InvitedAuth from "../auth/InvitedAuth";
-import RegisterAuthButton from "../../ui/RegisterAuthButton";
+import RegisterAuthButton from "../../ui/landing/RegisterAuthButton";
 
 function JoinUs() {
   return (

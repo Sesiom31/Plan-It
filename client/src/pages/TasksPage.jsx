@@ -1,17 +1,14 @@
-import AddTaskButton from "../components/tasks/AddTaskButton";
-import FormAddTask from "../components/tasks/FormAddTask";
-import TaskHeader from "../components/tasks/TaskHeader";
-import { useState } from "react";
+import HeaderTasks from "../components/tasks/HeaderTasks";
+import { Outlet } from "react-router-dom";
 
 function TasksPage() {
-  const [showForm, setShowForm] = useState(false);
   return (
     <section className="h-full">
-      <div className="h-full">
-        <TaskHeader />
-        <div className="w-full">
-          <AddTaskButton onChangeShowForm={setShowForm} />
-          <FormAddTask onChangeShowForm={setShowForm} showForm={showForm} />
+      <div className="h-full max-h-full w-full">
+        <HeaderTasks />
+
+        <div className="h-auto w-full">
+          <Outlet />
         </div>
       </div>
     </section>
