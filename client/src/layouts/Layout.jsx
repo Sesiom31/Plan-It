@@ -8,7 +8,7 @@ function Layout() {
       <div className="h-dvh max-h-dvh w-full">
         <Header />
         <div className="relative h-[calc(100%-4.5rem)]">
-          <main className="h-[calc(100%-5rem)] overflow-hidden">
+          <main className="h-[calc(100%-5rem)]">
             <Outlet />
           </main>
 

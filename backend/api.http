@@ -4,3 +4,7 @@ GET http://localhost:5000/auth/login
 
 ###
 GET http://localhost:5000/auth/verifyToken
+
+
+###
+GET http://localhost:5000/auth/getCategories

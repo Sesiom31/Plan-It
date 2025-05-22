@@ -19,6 +19,15 @@ const userSchema = new mongoose.Schema(
     password: { type: String, required: true, minLength: 6 },
     lastLogin: { type: Date },
     isGuest: { type: Boolean, default: false },
+    categories: [
+      {
+        name: { type: String, required: true },
+        color: { type: String, default: "#4CA7C3" },
+        cantidad: { type: Number, default: 0 },
+        isDefault: { type: Boolean, default: false },
+        createdAt: { type: Date, default: Date.now() },
+      },
+    ],
   },
   { timestamps: true }
 );

@@ -24,7 +24,7 @@ function Header() {
         <div className="col-span-1 place-self-center pl-1 md:justify-self-start md:pl-6">
           <LogoV className="size-[3.25rem]" fill="#ffffff" />
         </div>
-        <div className="col-span-4 h-10 w-full place-self-center px-2 py-1">
+        <div className="col-span-4 h-11 w-full place-self-center px-2 py-1">
           <label
             htmlFor="search"
             className="relative flex h-full w-full min-w-[8rem] max-w-[28rem] overflow-hidden rounded-md bg-main text-white ring-1 ring-gray-400 focus-within:ring-sky-500"

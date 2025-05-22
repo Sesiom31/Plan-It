@@ -12,6 +12,15 @@ const optionsToken = {
   maxAge: 60 * 60 * 1000, // en milisegundos
 };
 
+const categories = [
+  { name: "hoy", color: "#4CA7C3", isDefault: true },
+  { name: "importante", color: "#FCA0C3", isDefault: true },
+  { name: "trabajo", color: "#4C07C3", isDefault: true },
+  { name: "personal", color: "#40A003", isDefault: true },
+  { name: "pendientes", color: "#4CA0F3", isDefault: true },
+  { name: "completadas", color: "#081F85", isDefault: true },
+];
+
 export const userLogin = async (req, res) => {
   const { email, password } = req.body;
 
@@ -81,6 +90,7 @@ export const userRegister = async (req, res) => {
       email,
       password,
       lastLogin: new Date(),
+      categories,
     });
 
     await user.save();
@@ -121,6 +131,7 @@ export const userGuest = async (req, res) => {
       password: `guest_${Date.now()}`,
       lastLogin: new Date(),
       isGuest: true,
+      categories,
     });
 
     await guest.save();
@@ -158,5 +169,32 @@ export const verifyToken = async (req, res) => {
       .json({ success: true, message: "Token is valid", user: decoded });
   } catch (err) {
     return res.status(403).json({ success: false, message: "Invalid token" });
+  }
+};
+
+export const getCategories = async (req, res) => {
+  try {
+    const { id } = req.user;
+
+    if (!id) {
+      return res
+        .status(401)
+        .json({ success: false, message: "No token provided" });
+    }
+
+    const user = await User.findById(id);
+    if (!user) {
+      return res
+        .status(401)
+        .json({ success: false, message: "No token provided" });
+    }
+
+    return res.status(200).json({
+      success: true,
+      message: "Categorias obtenidas",
+      categories: user.categories,
+    });
+  } catch (err) {
+    return res.status(500).json({ success: false, message: err.message });
   }
 };

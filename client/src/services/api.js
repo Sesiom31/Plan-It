@@ -40,6 +40,10 @@ export const apiSlice = createApi({
         method: "POST",
       }),
     }),
+
+    getCategories: builder.query({
+      query: () => "auth/getCategories",
+    }),
   }),
 });
 
@@ -49,4 +53,5 @@ export const {
   useLoginUserMutation,
   useLogoutUserMutation,
   useGuestUserMutation,
+  useGetCategoriesQuery,
 } = apiSlice;
