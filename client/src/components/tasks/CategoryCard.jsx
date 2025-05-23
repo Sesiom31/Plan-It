@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { backgroundColorIsLight } from "../../helpers/backgroundColorIsLight";
-import { capitalizeWord } from "../../helpers/CapitalizeWord";
+import { capitalizeWord } from "../../helpers/capitalizeWord";
 
 function CategoryCard({ category, idSelected, setIdSelected }) {
   const isSelected = category._id === idSelected;

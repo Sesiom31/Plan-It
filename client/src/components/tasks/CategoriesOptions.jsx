@@ -10,7 +10,7 @@ import { RxCaretDown, RxCaretUp } from "react-icons/rx";
 
 import CategoryOption from "../../ui/tasks/CategoryOption";
 import PropTypes from "prop-types";
-import { capitalizeWord } from "../../helpers/CapitalizeWord";
+import { capitalizeWord } from "../../helpers/capitalizeWord";
 import clsx from "clsx";
 
 function CategoriesOptions({ categories }) {

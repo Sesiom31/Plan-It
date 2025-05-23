@@ -1,7 +1,7 @@
 import { ListboxOption } from "@headlessui/react";
 import PropTypes from "prop-types";
 import { RxCheck } from "react-icons/rx";
-import { capitalizeWord } from "../../helpers/CapitalizeWord";
+import { capitalizeWord } from "../../helpers/capitalizeWord";
 import clsx from "clsx";
 
 function CategoryOption({ category, lengthCantidad }) {
