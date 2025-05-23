@@ -12,8 +12,6 @@ function TasksHome() {
   console.log({ categories });
   const validsCategories = categories?.map((category) => category.name);
 
-  console.log(categories);
-
   useEffect(() => {
     const paramCategory = searchParam.get("category");
 
@@ -25,7 +23,7 @@ function TasksHome() {
   return (
     <div className="relative h-full max-h-[calc(100%-0.2rem)] w-full">
       <CategoriesOptions categories={categories} />
-      <DisplayTasks />
+      <DisplayTasks categories={categories} />
     </div>
   );
 }

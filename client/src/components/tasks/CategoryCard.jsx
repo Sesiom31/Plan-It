@@ -1,25 +1,42 @@
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { backgroundColorIsLight } from "../../helpers/backgroundColorIsLight";
+import { capitalizeWord } from "../../helpers/CapitalizeWord";
 
-function CategoryCard({ category }) {
+function CategoryCard({ category, idSelected, setIdSelected }) {
+  const isSelected = category._id === idSelected;
+  const isLight = backgroundColorIsLight(category.color);
+
+  const onSelected = () => {
+    setIdSelected(category._id);
+  };
+
   return (
-    <div className="h-auto w-full">
-      <Link className="flex h-24 w-full flex-col justify-start gap-2 rounded-lg bg-dividers px-2 py-4 text-white ring-1 ring-contrast">
-        <div className="flex w-full items-center justify-start gap-2">
-          <div className="size-4 rounded-full bg-red-500"></div>
-          <h3 className="text-xl font-bold">{category.name}</h3>
-        </div>
-      </Link>
-    </div>
+    <li
+      key={category._id}
+      onClick={onSelected}
+      className={`w-full origin-center rounded-lg px-4 py-2 transition-all duration-200 ease-out ${isSelected ? "min-h-52" : "min-h-28"}`}
+      style={{ backgroundColor: category.color }}
+    >
+      <h3
+        className="text-lg font-bold"
+        style={{ color: isLight ? "#122830" : "#ffffff" }}
+      >
+        {capitalizeWord(category.name)}
+      </h3>
+    </li>
   );
 }
 
 CategoryCard.propTypes = {
   category: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    icon: PropTypes.elementType.isRequired,
-    bg: PropTypes.string,
+    color: PropTypes.string.isRequired,
+    cantidad: PropTypes.number.isRequired,
+    isDefault: PropTypes.bool.isRequired,
+    _id: PropTypes.string.isRequired,
   }).isRequired,
+  idSelected: PropTypes.string,
+  setIdSelected: PropTypes.func.isRequired,
 };
 
 export default CategoryCard;
